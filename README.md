@@ -1,48 +1,63 @@
-# IoT Méteo Automatique & Prévision Météo
+# A simple but complete Python project that retrieves real weather data from a city, generates a PDF chart of forecasts, and automatically sends it via a Telegram bot.  
+Perfect for simulating a **connected mini weather station**.atic IoT Weather & Weather Forecast
+
+A simple but complete Python project that retrieves real weather data from a city, generates a PDF chart of forecasts, and automatically sends it via a Telegram bot.  
+Perfect for simulating a **connected mini weather station**.T Méteo Automatique & Prévision Météo
 
 Un projet Python simple mais complet qui récupère la météo réelle d’une ville, génère un graphique PDF des prévisions, et l’envoie automatiquement via un bot Telegram.  
 Parfait pour simuler une **mini-station météo connectée**.
 
-## Fonctionnement
+## How It Works
 
-- Récupère les prévisions météo horaires (température, humidité, description)
-- Génère un graphe de suivi météo (`graphe.pdf`)
-- Sauvegarde les données dans un fichier `donnees.csv`
-- Envoie le graphe chaque matin via Telegram à 8h
+- Retrieves hourly weather forecasts (temperature, humidity, description)
+- Generates a weather tracking graph (`graphe.pdf`)
+- Saves data in a `donnees.csv` file
+- Sends the graph every morning via Telegram at 8 AM
 
 
-## BESOIN
+## Requirements
 
-Python
-Compte sur OpenWeatherMap
-Compte Telegram
-Librairies : requests, matplotlib
-```
+- Python
+- OpenWeatherMap account
+- Telegram account
+- Libraries: requests, matplotlib
+
+```bash
 pip install requests matplotlib
 ```
 
-## Lancement
-```shell
-git clone https://github.com/votre-utilisateur/iot_arrosage_auto.git
-```
-```shell
-cd https://github.com/votre-utilisateur/iot_arrosage_auto.git
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/iot_arrosage_auto.git
 ```
 
-Remplacez :
+Navigate to the project directory:
+
+```bash
+cd iot_arrosage_auto
+```
+
+Replace the following values with your own:
+
 ```env
-API_KEY = "votre_clé_openweathermap"
-BOT_TOKEN = "votre_token_telegram"
-VILLE = "ta_ville"
-CHAT_ID = "votre_id_chat"
+API_KEY = "your_openweathermap_key"
+BOT_TOKEN = "your_telegram_token"
+VILLE = "your_city"
+CHAT_ID = "your_chat_id"
 ```
-Par vos clé ou tokken respectif et par le nom de la ville dont vous souhaitez la météo puis faites
-```
+
+Then run the script:
+
+```bash
 python meteo.py
 ```
-Vous devriez recevoir une notification sur telegram avec le pdf de la prévision météo
+
+You should receive a notification on Telegram with the weather forecast PDF.
 
 
-## En Cours
+## In Progress
 
-Le mettre sur un Raspberry avec un serveur local pour pouvoir en faire un crontab qui tourne tout les jours sans avoir à lancer le script manuellement
+Deploy on a Raspberry Pi with a local server to set up a crontab that runs daily without having to manually launch the script.
